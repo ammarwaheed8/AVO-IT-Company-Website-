@@ -6,7 +6,7 @@ A fully responsive, multi-page front-end website for a fictional IT company buil
 
 ## 🌐 Live Preview
 
-> Live Link" (https://avo-ammarwaheed.netlify.app/)_
+> Live Link: <a href="https://avo-ammarwaheed.netlify.app/" target="_blank">Visit Website</a>
 
 ---
 
