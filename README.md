@@ -6,7 +6,7 @@ A fully responsive, multi-page front-end website for a fictional IT company buil
 
 ## 🌐 Live Preview
 
-> _Deploy on GitHub Pages or any static host to view live._
+> Live Link" (https://avo-ammarwaheed.netlify.app/)_
 
 ---
 
@@ -98,12 +98,12 @@ No build tools or installations needed.
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ammarwaheed8/avo-it-website.git
+   git clone https://github.com/ammarwaheed8/AVO-IT-Company-Website-.git
    ```
 
 2. **Open in browser**
    ```bash
-   cd avo-it-website
+   cd AVO-IT-Company-Website
    open index.html
    ```
    Or simply drag `index.html` into your browser.
@@ -138,7 +138,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙋‍♂️ Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/ammarwaheed8)
-- LinkedIn: [your-linkedin](https://pk.linkedin.com/in/ammar-waheed-a6a50b258)
+- GitHub: [@Ammar Waheed](https://github.com/ammarwaheed8)
+- LinkedIn: [Ammar Waheed](https://pk.linkedin.com/in/ammar-waheed-a6a50b258)
 
 ---
