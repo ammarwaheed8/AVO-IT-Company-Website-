@@ -1,0 +1,867 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.active-red {color: #d1002c!important;}
+
+.section-main-heading {
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0 0 30px 0;
+    color: #000000CC;
+    text-align: center;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(100px); 
+    transition: opacity 1.2s ease-in-out, transform 1s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-pallete {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.pallete-1 {
+    background-color: #ffffff;
+    top: 295px;
+    left: -30px;
+    width: 90%;
+    height: 106px;
+    position: relative;
+    transform: matrix(1, 0.102, 0, 2, 0, 0);
+}
+
+.pallete-2 {
+    background-color: #ffffff;    
+    top: 163px;
+    left: 527px;
+    width: 106%;
+    height: 100px;
+    position: relative;
+    transform: matrix(1, -0.19, 0, 2, 0, 0);
+}
+
+
+/* --- Navbar Styling CSS --- */
+#logo {
+    font-size: 24px;
+    top: 10px;
+    left: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+#logo span {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+a {color: #ffffff99;}
+
+.header {
+    background-color: #020202;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+  
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #020202;
+}
+  
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #020202;
+    text-decoration: none;
+    transition: color ease-in-out 0.3s 0.1ms;
+
+}
+  
+.header li a:hover,
+.header .menu-btn:hover {
+    color: #d1002c!important;
+}
+  
+/* menu */
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+  
+/* menu icon */
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+  
+.header .menu-icon .navicon {
+    background: #e51111;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+  
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #e51111;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+  
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+  
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+  
+/* menu btn */
+  
+.header .menu-btn {
+    display: none;
+}
+  
+.header .menu-btn:checked ~ .menu {
+    max-height: 340px;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+  
+/* --- Section-1 Styling CSS --- */
+#section-1 {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bg2-sec1-home.jpg') no-repeat center center;
+    background-position: bottom;
+}
+
+.sec-1-content {
+    width: 936px;
+    height: 165px;
+    padding:  7px 7px 48px 7px;
+    margin: 0 auto 48px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    bottom: -210px;
+}
+
+.sec-1-all-hero {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.sec-1-all-hero i {
+    margin-left: 3px;
+    font-weight: 900;
+}
+
+
+.sec-1-all-hero p, .sec-1-all-hero a {
+    color: #fffceab3;  
+    text-decoration: none; 
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+#sec-1-hero-heading {
+    color: #fffcea;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 30px 0 0 0;
+}
+
+
+/* --- Section-2 Styling CSS --- */
+#section-2 {
+    width: 100%;
+    height: fit-content;
+    padding: 192px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.sec-2-services-container {
+    width: 100%;
+    height: fit-content;
+    gap: 25px;
+    padding: 40px 25px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.service {
+    width: 170px;
+    height: 158px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.service img {
+    width: 60px;
+}
+
+.service h3 {
+    font-size: 18px;
+    padding: 24px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sec-2-container-2, .sec-2-container-3 {
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 0;
+}
+
+.sec-2-container-3 {
+    margin-top: 40px;
+    gap: 0 2rem;
+}
+
+.sec-2-cont-2-child {
+    width: 333px;
+    height: 360px;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+#child-1 h2 {
+    font-size: 30px;
+    margin: 0 0 8px 0;
+    text-align: right;
+    color: #000000CC;
+}
+
+#child-1 p {
+    font-size: 16px;
+    margin: 0 0 16px 0;
+    color: #A0A0B4;
+    line-height: 28px;
+    text-align: right;
+}
+
+#child-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#child-3 p {
+    font-size: 16px;
+    margin: 0 0 16px 0;
+    color: #A0A0B4;
+    line-height: 28px;
+    text-align: left;
+}
+
+#child-3 span {
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #d1002c;
+}
+
+.sec-2-cont-3-child {
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sec-2-cont-3-child h1 {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 10px 54px 0;
+    font-size: 50px;
+    font-weight: 300;
+    color:#d1002c;
+    border-bottom: 1px solid rgb(148 148 148 / 25%);
+}
+
+.sec-2-cont-3-detail {
+    width: 225px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.sec-2-cont-3-detail h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color:#000000CC;
+}
+
+.sec-2-cont-3-detail p {
+    font-size: 16px;
+    color: #A0A0B4;
+    line-height: 28px;
+}
+
+.sec-2-poster-container {
+    width: 970px;
+    height: 360px;
+    padding: 55px 40px;
+    margin: 40px auto 0 auto;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.623)), url('img/bg1-sec1-home.jpg') center center;
+}
+
+.sec-2-poster-container h3 {
+    color: #d1002c;
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0 0 8px 0;
+}
+
+.sec-2-poster-container h1 {
+    max-width: 400px;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.sec-2-poster-container p {
+    max-width: 400px;
+    margin: 13px 0 36px 0;
+    font-size: 16px;
+    color: #A0A0B4;
+    line-height: 20px;
+}
+
+.sec-2-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+    width: 150px;
+    height: 55px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #d1002c !important;
+}
+
+
+/* --- Section-3 Styling CSS --- */
+#section-3 {
+    width: 100%;
+    height: fit-content;
+    padding: 192px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+.sec-3-team-container {
+    width: fit-content;
+    height: fit-content;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.team-member {
+    padding: 0 15px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.team-member:hover {cursor: pointer;}
+
+.team-member:not(:hover) .member-name, .team-member:not(:hover) .team-social-links , .social-tab:not(.social-tab:hover){
+    transition: all 0.35s ease-in-out 0.1ms;
+    text-decoration: none;
+}
+
+.team-member:hover .member-name {
+    color: #d1002c;
+    transition: all 0.35s ease-in-out 0.1ms;
+}
+
+.team-member:hover .team-social-links {
+    opacity: 1;
+    transition: all 0.35s ease-in-out 0.1ms;
+}
+
+.team-memb-img {
+    width: 220px;
+    height: 330px;
+    margin: 0 0 12px 0;
+    object-fit: cover;
+    background-image: url("img/customer-2.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+}
+
+.member-name {
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 0 8px 18px;
+    text-transform: uppercase;
+}
+
+.member-job {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 24px 18px;
+    color: #d1002c;
+    text-transform: capitalize;
+}
+
+.team-social-links {
+    width: 44px;
+    height: fit-content;
+    margin: 14px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px 0;
+}
+
+.social-tab {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    padding: 5%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-tab:hover {
+    background-color: #d1002c;
+    text-decoration: none;
+    transition: all 0.35s ease-in-out 0.1ms;
+}
+
+.social-icon {
+    color: #d1002c;
+}
+
+.social-tab:hover .social-icon {
+    color: #ffffff;
+    transition: all 0.35s ease-in-out 0.1ms;
+}
+
+
+/* --- Section-4 Styling CSS --- */
+#section-4 {
+    width: 100%;
+    height: fit-content;
+    padding: 192px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.sec-4-carousel-container {
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    gap: 0 2rem;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.carousel-child {
+    width: 304px;
+    height: 268px;
+    padding: 15px;
+    margin: 30px auto;
+    border-radius: 5px;
+    position: relative;
+    background-color: #f3f3f3;
+}
+
+.carousel-child p {
+    margin: 0 0 22px 0;
+    font-size: 16px;
+    color: #A0A0B4;
+    line-height: 30px;  
+}
+
+#quote-icon {
+    font-size: 40px;
+    position: absolute;
+    top: -23px;
+}
+
+.client-box {
+    display: flex;
+    float: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.client-detail {
+    margin: 0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.client-detail h2 {
+    font-size: 18px;
+    margin: 0 0 4px 0;
+}
+
+.client-detail h3 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #B3B3B3;
+}
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    width: 100%;
+    height: fit-content;
+    padding: 86px 126px 126px 126px;
+    background-color: #020202;
+    color: #ffffffB3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper-footer-content {
+    /* border: 1px solid green; */
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-content-container {
+    /* border: 1px solid gold; */
+    width: 194px;
+    height: fit-content;
+    padding: 7px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+    color: #a0a0b4;
+}
+
+.container-container-heading {
+    color: #ffffffe3;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.social-links a {
+    height: 40px;
+    width: 40px;
+    margin: 7px;
+    background-color: #ffffff1A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-contact-links {
+    color: #fffcea80;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact-links i {
+    margin: 0 7px 9px 0;
+}
+
+.footer-static-content {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+
+.footer-static-content i {
+    margin: 0 11px 11px 0;
+}
+
+.footer-ideal {
+    margin: 0 0 20px 0;
+}
+
+.footer-ideal i {
+    margin: 4px 22px 9px 0;
+}
+
+#Copyright-bar {
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+#Copyright-bar a {
+    color: #d1002c;
+    text-decoration: none;
+}
+
+
+/* ------ hamburger media query ------*/
+@media (min-width: 48em) {
+.header li {
+    float: left;
+}
+    
+.header li a {
+    padding: 20px 30px;
+}
+
+.header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+}
+
+.header .menu-icon {
+    display: none;
+}
+
+.header {
+    background-color: transparent;
+    margin: 30px auto 0 auto;
+    max-width: 936px;
+    height: 55px;
+    position: relative;
+}
+
+.header ul {
+    background-color: transparent;
+}
+
+.header li a {
+    border-right: 1px solid #02020200;
+    font-size: 13px;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 992px --------- */
+@media screen and (max-width: 991px){
+/* ----- Navbar CSS Style ------ */
+.header {
+    max-width: 750px;
+}
+
+/* ------ Section-1 Styling ------ */
+.sec-1-content {
+    width: 78%;
+}
+
+/* ------ Section-3 Styling ------ */
+#section-3 {
+    padding: 100px 0;
+}
+
+.sec-3-team-container {
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+}
+
+
+/* --------- Media Query of Max width of 767px --------- */
+@media screen and (max-width: 766px){
+/* ------ Section-1 Styling ------ */
+.sec-1-content {
+    width: 86%;
+}
+
+.pallete-1 {
+    top: 381px;
+    left: -30px;
+    width: 90%;
+    height: 106px;
+}
+
+.pallete-2 {
+    top: 275px;
+    left: 73px;
+    width: 100%;
+    height: 100px;
+}
+
+/* ------ Section-3 Styling ------ */
+.sec-3-team-container {
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* ------ Section-4 Styling ------ */
+#section-4 {
+    padding: 100px 0 40px 0;
+}
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    padding: 86px 40px;
+}
+
+.upper-footer-content {
+    justify-content: center;
+}
+
+.footer-content-container {
+    width: 100%;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 576px --------- */
+@media screen and (max-width: 576px){
+/* ------ Section-1 Styling ------ */
+
+/* ------ Section-2 Styling ------ */
+#section-2 {
+    padding: 100px 0;
+}
+
+.sec-2-poster-container {
+    width: fit-content;
+    height: fit-content;
+}
+
+.sec-2-poster-container h1 {
+    max-width: 88%;
+}
+
+.sec-2-poster-container p {
+    max-width: 88%;
+
+} 
+
+/* ------ Section-3 Styling ------ */
+.sec-3-team-container {
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+}
+
+/* --------- Media Query of Max width of 390px --------- */
+@media screen and (max-width: 389px){
+/* ------ Section-1 Styling ------ */
+
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    padding: 76px 30px;
+}
+    
+}

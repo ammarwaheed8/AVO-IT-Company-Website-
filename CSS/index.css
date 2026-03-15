@@ -1,0 +1,1162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.active-red {color: #d1002c!important;}
+
+.section-main-heading {
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0 0 30px 0;
+    color: #000000CC;
+    text-align: center;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(100px); 
+    transition: opacity 1.2s ease-in-out, transform 1s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Navbar Styling CSS --- */
+#logo {
+    font-size: 24px;
+    top: 10px;
+    left: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+#logo span {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+a {color: #ffffff99;}
+
+.header {
+    background-color: #020202;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #020202;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #020202;
+    text-decoration: none;
+    transition: color ease-in-out 0.3s 0.1ms;
+    
+  }
+  
+.header li a:hover,
+.header .menu-btn:hover {
+    color: #d1002c!important;
+}
+  
+  /* menu */
+  .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  
+  /* menu icon */
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #e51111;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #e51111;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 340px;
+  }
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* --- Section-1 Styling CSS --- */
+#section-1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sec-1-hero-pallete {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.sec-1-pallete-1 {
+    background-color: #ffffff;
+    top: 274px;
+    left: -30px;
+    width: 90%;
+    height: 70px;
+    position: relative;
+    transform: matrix(1, 0.102, 0, 2, 0, 0);
+}
+
+.sec-1-pallete-2 {
+    background-color: #ffffff;
+    top: 184px;
+    left: 610px;
+    width: 105%;
+    height: 120px;
+    position: relative;
+    transform: matrix(1, -0.19, 0, 2, 0, 0);
+}
+
+
+/* --- Content Box with Image Transition Styling CSS --- */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+  
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: scale(1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+  
+.slide1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bg1-sec1-home.jpg') no-repeat center center;
+}
+  
+.slide2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bg2-sec1-home.jpg') no-repeat center center;
+}
+  
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+  
+.white-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0);
+    pointer-events: none;
+    transition: background 0.4s ease;
+}
+  
+.content {
+    position: relative;
+    z-index: 1;
+    min-width: 870px;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left-pane {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.left-pane h1 {
+    width: 418px;
+    height: fit-content;
+    margin-bottom: 24px;
+    font-size: 40px;
+    text-align: left;
+    font-weight: 900;
+}
+
+.left-pane p {
+    width: 388px;
+    height: fit-content;
+    margin-bottom: 24px;
+    text-align: left;
+    font-size: 16px;
+    color: #ffffffcc;
+}
+
+.red-btn {
+    font-size: 14px;
+    padding: 16px 24px;
+    width: 150px;
+    height: 55px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #d1002c !important;
+}
+
+.right-pane {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.right-pane h1 {
+    width: fit-content;
+    height: fit-content;
+    font-size: 40px;
+    text-align: left;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-pane p {
+    width: 100px;
+    height: fit-content;
+    margin-bottom: 24px;
+    text-align: left;
+    font-size: 16px;
+    color: #ffffff66;
+}
+
+#caro-1-bar {
+    width: 6px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #d1002c;
+    position: absolute;
+    top: 12px;
+    right: 10px;   
+}
+
+#caro-2-bar {
+    width: 6px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #d1002c;
+    position: absolute;
+    top: 30px;
+    right: 55px;   
+}
+
+/* --- Section-2 Styling CSS --- */
+#section-2 {
+    width: 100%;
+    height: fit-content;
+    padding: 192px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.sec-2-services-container {
+    width: 100%;
+    height: fit-content;
+    gap: 25px;
+    padding: 40px 25px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.service {
+    width: 170px;
+    height: 158px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.service img {
+    width: 60px;
+}
+
+.service h3 {
+    font-size: 18px;
+    padding: 24px 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.sec-2-container-2, .sec-2-container-3 {
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px 0;
+}
+
+.sec-2-container-3 {
+    margin-top: 40px;
+    gap: 0 2rem;
+}
+
+.sec-2-cont-2-child {
+    width: 333px;
+    height: 360px;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+#child-1 h2 {
+    font-size: 30px;
+    margin: 0 0 8px 0;
+    text-align: right;
+    color: #000000CC;
+}
+
+#child-1 p {
+    font-size: 16px;
+    margin: 0 0 16px 0;
+    color: #A0A0B4;
+    line-height: 28px;
+    text-align: right;
+}
+
+#child-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#child-3 p {
+    font-size: 16px;
+    margin: 0 0 16px 0;
+    color: #A0A0B4;
+    line-height: 28px;
+    text-align: left;
+}
+
+#child-3 span {
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #d1002c;
+}
+
+.sec-2-cont-3-child {
+    height: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sec-2-cont-3-child h1 {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 10px 54px 0;
+    font-size: 50px;
+    font-weight: 300;
+    color:#d1002c;
+    border-bottom: 1px solid rgb(148 148 148 / 25%);
+}
+
+.sec-2-cont-3-detail {
+    width: 225px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.sec-2-cont-3-detail h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color:#000000CC;
+}
+
+.sec-2-cont-3-detail p {
+    font-size: 16px;
+    color: #A0A0B4;
+    line-height: 28px;
+}
+
+
+/* --- Section-3 Styling CSS --- */
+#section-3 {
+    width: 100%;
+    height: fit-content;
+    padding: 192px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+.sec-3-item-container {
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    margin: 25px auto;
+    gap: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-3-item-img {
+    width: 406px;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sec-3-item {
+    width: 466px;
+    height: 282px;
+}
+
+.sec-3-item-container h4 {
+    margin: 0 0 2px 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 4px;
+}
+
+.sec-3-item-heading {
+    font-size: 40px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.sec-3-item-container p {
+    font-size: 16px;
+    margin: 13px 0 36px 0;
+    color: #A0A0B4;
+    line-height: 20px;
+}
+
+.sec-3-person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sec-3-person-img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.person-detail {
+    margin: 0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+}
+
+.person-detail h5 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.person-detail p {
+    font-size: 12px;
+    color: #A0A0B4;
+    line-height: 20px;
+    margin: 6px 0 4px 0;
+}
+
+.sec-3-btn {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #000000e0;
+    padding: 7px 10px;
+    border: 1px solid rgba(200, 200, 200, 0.561);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+
+/* --- Section-4 Styling CSS --- */
+#section-4 {
+    width: 100%;
+    height: fit-content;
+    padding: 192px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.sec-4-carousel-container {
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    gap: 0 2rem;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.carousel-child {
+    width: 304px;
+    height: 268px;
+    padding: 15px;
+    margin: 30px auto;
+    border-radius: 5px;
+    position: relative;
+    background-color: #f3f3f3;
+}
+
+.carousel-child p {
+    margin: 0 0 22px 0;
+    font-size: 16px;
+    color: #A0A0B4;
+    line-height: 30px;  
+}
+
+#quote-icon {
+    font-size: 40px;
+    position: absolute;
+    top: -23px;
+}
+
+.client-box {
+    display: flex;
+    float: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.client-detail {
+    margin: 0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.client-detail h2 {
+    font-size: 18px;
+    margin: 0 0 4px 0;
+}
+
+.client-detail h3 {
+    font-size: 16px;
+    font-weight: 300;
+    color: #B3B3B3;
+}
+
+.sec-4-poster-container {
+    width: 970px;
+    height: 360px;
+    padding: 55px 40px;
+    margin: 40px auto 0 auto;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.623)), url('../img/bg1-sec1-home.jpg') center center;
+}
+
+.sec-4-poster-container h3 {
+    color: #d1002c;
+    font-size: 16px;
+    font-weight: 200;
+    margin: 0 0 8px 0;
+}
+
+.sec-4-poster-container h1 {
+    max-width: 400px;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+}
+
+.sec-4-poster-container p {
+    max-width: 400px;
+    margin: 13px 0 36px 0;
+    font-size: 16px;
+    color: #A0A0B4;
+    line-height: 20px;
+}
+
+.sec-4-btn {
+    padding: 8px 15px;
+}
+
+
+/* --- Section-5 Styling CSS --- */
+#section-5 {
+    width: 100%;
+    height: fit-content;
+    padding: 192px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+.sec-5-blogs-container {
+    width: 100%;
+    height: fit-content;
+    padding: 0 15px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.blogs {
+    width: 230px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.text {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #0a0a0aff;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.blog-img {
+    width: 100%;
+    height: 280px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-date {
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #0c0c0c;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.blog-post {
+    font-size: 16px;
+    color: #A0A0B4;
+    line-height: 20px;
+    margin-bottom: 16px;
+    line-height: 28px;
+}
+
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    width: 100%;
+    height: fit-content;
+    padding: 86px 126px 126px 126px;
+    background-color: #020202;
+    color: #ffffffB3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper-footer-content {
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-content-container {
+    width: 194px;
+    height: fit-content;
+    padding: 7px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+    color: #a0a0b4;
+}
+
+.container-container-heading {
+    color: #ffffffe3;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.social-links a {
+    height: 40px;
+    width: 40px;
+    margin: 7px;
+    background-color: #ffffff1A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-contact-links {
+    color: #fffcea80;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact-links i {
+    margin: 0 7px 9px 0;
+}
+
+.footer-static-content {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+
+.footer-static-content i {
+    margin: 0 11px 11px 0;
+}
+
+.footer-ideal {
+    margin: 0 0 20px 0;
+}
+
+.footer-ideal i {
+    margin: 4px 22px 9px 0;
+}
+
+#Copyright-bar {
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+#Copyright-bar a {
+    color: #d1002c;
+    text-decoration: none;
+}
+
+
+/* ------ hamburger media query ------*/
+@media (min-width: 48em) {
+.header li {
+    float: left;
+}
+    
+.header li a {
+    padding: 20px 30px;
+}
+
+.header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+}
+
+.header .menu-icon {
+    display: none;
+}
+
+.header {
+    background-color: transparent;
+    margin: 30px auto 0 auto;
+    max-width: 936px;
+    height: 55px;
+    position: relative;
+}
+
+.header ul {
+    background-color: transparent;
+}
+
+.header li a {
+    border-right: 1px solid #02020200;
+    font-size: 13px;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 992px --------- */
+@media screen and (max-width: 991px){
+/* --- Navbar --- */
+.header {
+    max-width: 750px;
+}
+
+/* --- Section 1 Content --- */
+.content {
+    min-width: 700px;
+    padding: 20px;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 767px --------- */
+@media screen and (max-width: 766px){
+/* Section 1 Content */
+.content {
+    min-width: 500px;
+    width: fit-content;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.left-pane {
+    margin-bottom: 30px;
+    width: 450px;
+}
+
+.right-pane {
+    width: 350px;
+    height: 148px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-pane p {
+    width: 400px;
+    margin: 0 0 0 40px;
+}
+
+#caro-1-bar {
+    top: 463px;
+    left: 145px;   
+    margin-left: 10px;
+}
+
+#caro-2-bar {
+    top: 463px;
+    left: 125px;   
+    margin-left: 10px;
+}
+
+.sec-1-pallete-2 {
+    top: 190px;
+    left: 420px;
+}
+
+/* --- Section-5 Styling CSS --- */
+.blogs {
+    width: 253px;
+}
+
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    padding: 86px 40px;
+}
+
+.upper-footer-content {
+    justify-content: center;
+}
+
+.footer-content-container {
+    width: 100%;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 576px --------- */
+@media screen and (max-width: 576px){
+ 
+/* --- Section-1 Styling --- */
+.content {
+    min-width: 330px;
+    width: fit-content;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 45px;
+}
+    
+.left-pane {
+    margin-bottom: 30px;
+    width: 330px;
+}
+    
+.left-pane h1 {
+    width: 320px;
+    text-align: center;
+}
+    
+.left-pane p {
+    width: 320px;
+    text-align: center;
+}
+
+.red-btn {
+    margin: auto;
+}
+
+    
+.right-pane {
+    width: 330px;
+    height: 148px;
+    margin: 30px auto 0 auto;
+}
+
+.right-pane p {
+    width: 400px;
+    margin: 0 0 0 40px;
+}
+
+.right-pane h1 {
+    width: 225px;
+}
+
+#caro-1-bar {
+    top: 518px;
+    left: 110px;   
+    margin-left: 10px;
+}
+
+#caro-2-bar {
+    top: 518px;
+    left: 95px;   
+    margin-left: 10px;
+}
+
+.sec-1-pallete-2 {
+    top: 205px;
+    left: 225px;
+}
+
+
+/* --- Section-3 Styling CSS --- */
+#section-3 {
+    padding: 80px 0;
+}
+
+.sec-3-item-container {
+    width: 96%;
+}
+
+.sec-3-item-img {
+    width: 100%;
+    height: 450px;
+}
+
+.sec-3-item {
+    margin: 45px 0;
+    width: 100%;
+    height: fit-content;
+}
+
+
+/* --- Section-5 Styling CSS --- */
+#section-5 {
+    padding: 80px 0;
+}
+
+.blogs {
+    width: 96%;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 390px --------- */
+@media screen and (max-width: 389px){
+
+/* Section-1 Styling */
+.content {
+    min-width: 320px;
+    width: fit-content;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 45px;
+}
+    
+.left-pane {
+    margin-bottom: 30px;
+    width: 310px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+.left-pane h1 {
+    width: 240px;
+}
+    
+.left-pane p {
+    width: 240px;
+}
+    
+.right-pane {
+    width: 300px;
+    height: 148px;
+    padding: 5px;
+    flex-direction: column;
+}
+
+.right-pane h1 {
+    width: 70px;
+}
+
+
+.right-pane p {
+    width: 150px;
+    margin: 0;
+    text-align: center;
+}
+
+#caro-1-bar {
+    top: 529px;
+    left: 210px;   
+    margin-left: 10px;
+}
+
+#caro-2-bar {
+    top: 538px;
+    left: 200px;   
+    margin-left: 10px;
+}
+
+.sec-1-pallete-2 {
+    top: 214px;
+    left: 200px;
+}
+
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    padding: 76px 30px;
+}
+    
+}

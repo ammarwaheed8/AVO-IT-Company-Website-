@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.active-red {color: #d1002c!important;}
+
+.section-main-heading {
+    font-size: 36px;
+    font-weight: 900;
+    margin: 0 0 30px 0;
+    color: #000000CC;
+    text-align: center;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(100px); 
+    transition: opacity 1.2s ease-in-out, transform 1s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-pallete {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.pallete-1 {
+    background-color: #ffffff;    
+    top: 295px;
+    left: -30px;
+    width: 90%;
+    height: 106px;
+    position: relative;
+    transform: matrix(1, 0.102, 0, 2, 0, 0);
+}
+
+.pallete-2 {
+    background-color: #ffffff;    
+    top: 163px;
+    left: 527px;
+    width: 106%;
+    height: 100px;
+    position: relative;
+    transform: matrix(1, -0.19, 0, 2, 0, 0);
+}
+
+
+/* --- Navbar Styling CSS --- */
+#logo {
+    font-size: 24px;
+    top: 10px;
+    left: 18px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+#logo span {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+a {color: #ffffff99;}
+
+.header {
+    background-color: #020202;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+  
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #020202;
+}
+  
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #020202;
+    text-decoration: none;
+    transition: color ease-in-out 0.3s 0.1ms;
+}
+  
+.header li a:hover,
+.header .menu-btn:hover {
+    color: #d1002c!important;
+}
+  
+/* menu */
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+  
+/* menu icon */
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+  
+.header .menu-icon .navicon {
+    background: #e51111;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+  
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #e51111;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+  
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+  
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+  
+/* menu btn */
+  
+.header .menu-btn {
+    display: none;
+}
+  
+.header .menu-btn:checked ~ .menu {
+    max-height: 340px;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+  
+/* --- Section-1 Styling CSS --- */
+#section-1 {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/bg2-sec1-home.jpg') no-repeat center center;
+    background-position: bottom;
+}
+
+.sec-1-content {
+    width: 936px;
+    height: 165px;
+    padding:  7px 7px 48px 7px;
+    margin: 0 auto 48px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    bottom: -210px;
+}
+
+.sec-1-all-hero {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.sec-1-all-hero i {
+    margin-left: 3px;
+    font-weight: 900;
+}
+
+
+.sec-1-all-hero p, .sec-1-all-hero a {
+    color: #fffceab3;  
+    text-decoration: none; 
+    font-size: 13.5px;
+    font-weight: 500;
+}
+
+#sec-1-hero-heading {
+    color: #fffcea;
+    font-size: 40px;
+    font-weight: 900;
+    margin: 30px 0 0 0;
+}
+
+
+/* --- Section-2 Styling CSS --- */
+#section-2 {
+    width: 100%;
+    height: fit-content;
+    padding: 192px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+
+.sec-2-item-container {
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    margin: 25px auto;
+    gap: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-2-item-img {
+    width: 406px;
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sec-2-item {
+    width: 466px;
+    height: 282px;
+}
+
+.sec-2-item-container h4 {
+    margin: 0 0 2px 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 4px;
+}
+
+.sec-2-item-heading {
+    font-size: 40px;
+    font-weight: 400;
+    color: #000000;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.sec-2-item-container p {
+    font-size: 16px;
+    margin: 13px 0 36px 0;
+    color: #A0A0B4;
+    line-height: 20px;
+}
+
+.sec-2-person {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.sec-2-person-img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.person-detail {
+    margin: 0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+}
+
+.person-detail h5 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.person-detail p {
+    font-size: 12px;
+    color: #A0A0B4;
+    line-height: 20px;
+    margin: 6px 0 4px 0;
+}
+
+.sec-2-btn {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #000000e0;
+    padding: 7px 10px;
+    border: 1px solid rgba(200, 200, 200, 0.561);
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.content-navigation {
+    padding: 5px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 3rem auto 0 auto;
+    gap: 5px;
+}
+
+.nav-option {
+    font-size: 16px;
+    font-weight: 400;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #020202;
+    border: 1px solid #eaeaed;
+}
+
+.nav-option:hover {
+    background-color: #d1002c;
+    color: #ffffff;
+    transition: all 0.35s ease-in-out 0.5ms;    
+}
+
+.nav-option:not(:hover) {
+    transition: all 0.35s ease-in-out 0.5ms;    
+}
+
+.active-navigation {
+    background-color: #d1002c;
+    color: #ffffff;
+}
+
+
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    width: 100%;
+    height: fit-content;
+    padding: 86px 126px 126px 126px;
+    background-color: #020202;
+    color: #ffffffB3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper-footer-content {
+    /* border: 1px solid green; */
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-content-container {
+    /* border: 1px solid gold; */
+    width: 194px;
+    height: fit-content;
+    padding: 7px;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+    color: #a0a0b4;
+}
+
+.container-container-heading {
+    color: #ffffffe3;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.social-links a {
+    height: 40px;
+    width: 40px;
+    margin: 7px;
+    background-color: #ffffff1A;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer-contact-links {
+    color: #fffcea80;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact-links i {
+    margin: 0 7px 9px 0;
+}
+
+.footer-static-content {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 15px;
+}
+
+.footer-static-content i {
+    margin: 0 11px 11px 0;
+}
+
+.footer-ideal {
+    margin: 0 0 20px 0;
+}
+
+.footer-ideal i {
+    margin: 4px 22px 9px 0;
+}
+
+#Copyright-bar {
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+#Copyright-bar a {
+    color: #d1002c;
+    text-decoration: none;
+}
+
+/* ------ hamburger media query ------*/
+@media (min-width: 48em) {
+.header li {
+    float: left;
+}
+    
+.header li a {
+    padding: 20px 30px;
+}
+
+.header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+}
+
+.header .menu-icon {
+    display: none;
+}
+
+.header {
+    background-color: transparent;
+    margin: 30px auto 0 auto;
+    max-width: 936px;
+    height: 55px;
+    position: relative;
+}
+
+.header ul {
+    background-color: transparent;
+}
+
+.header li a {
+    border-right: 1px solid #02020200;
+    font-size: 13px;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 992px --------- */
+@media screen and (max-width: 991px){
+/* ----- Navbar CSS Style ------ */
+.header {
+    max-width: 750px;
+}
+
+/* ------ Section-1 Styling ------ */
+.sec-1-content {
+    width: 78%;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 767px --------- */
+@media screen and (max-width: 766px){
+/* ------ Section-1 Styling ------ */
+.sec-1-content {
+    width: 86%;
+}
+
+.pallete-1 {
+    top: 381px;
+    left: -30px;
+    width: 90%;
+    height: 106px;
+}
+
+.pallete-2 {
+    top: 275px;
+    left: 73px;
+    width: 100%;
+    height: 100px;
+}
+
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    padding: 86px 40px;
+}
+
+.upper-footer-content {
+    justify-content: center;
+}
+
+.footer-content-container {
+    width: 100%;
+}
+
+}
+
+
+/* --------- Media Query of Max width of 576px --------- */
+@media screen and (max-width: 576px){
+
+}
+
+/* --------- Media Query of Max width of 390px --------- */
+@media screen and (max-width: 389px){
+
+/* ------ Footer CSS Styling ------*/
+footer {
+    padding: 76px 30px;
+}
+    
+}
